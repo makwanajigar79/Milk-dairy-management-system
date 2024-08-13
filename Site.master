@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />  
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+        
+            <div class="title">
+                
+                    <asp:Image ID="Image1" runat="server" Height="124px" Width="179px" 
+                        ImageAlign="Middle" ImageUrl="~/images/1716291474080.jpg" />
+                  
+           
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="lblHead" runat="server" Font-Bold="True" 
+                        Font-Names="Comic Sans MS" Font-Size="30px" ForeColor="White" 
+                        Text="MILK DAIRY MANAGEMENT SYSTEM"></asp:Label>
+                  
+              
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="LogOut_btn" runat="server" BackColor="#000066" 
+                        Font-Bold="True" Font-Italic="True" onclick="LogOut_btn_Click" 
+                        ForeColor="White">LOG OUT</asp:LinkButton>
+                  
+              
+            </div>
+          
+           
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                   >
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        
+                        <asp:MenuItem Text="Account" Value="Account">
+                            <asp:MenuItem NavigateUrl="~/AddAccount.aspx" Text="Add Account" 
+                                Value="Add Account"></asp:MenuItem>
+                             <asp:MenuItem NavigateUrl="~/ViewAccount.aspx" Text="View Account" 
+                                Value="View Account"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/EditAccount.aspx" Text="Edit Account" 
+                                Value="Edit Account"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/DeleteAccount.aspx" Text="Delete Account" 
+                                Value="Delete Account"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Milk Menu" Value="Milk Menu">
+                            <asp:MenuItem NavigateUrl="~/BuyMilk.aspx" Text="Buy Milk" Value="Buy Milk">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MilkMenuEdit.aspx" Text="Edit" Value="Edit">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Setting" Value="Setting">
+                            <asp:MenuItem NavigateUrl="~/FateSetting.aspx" Text="Fate Setting" 
+                                Value="Fate Setting"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/PasswordSetting.aspx" Text="Password" 
+                                Value="Password"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/SalarySetting.aspx" Text="Salary" Value="Salary">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Report's" Value="Report's">
+                            <asp:MenuItem NavigateUrl="~/AccountReport.aspx" Text="Account" Value="Account">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/SalaryReport.aspx" Text="Salary" Value="Salary">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="User" Value="User"></asp:MenuItem>
+                        
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main" style="background-image: url('images/bg1.png');">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <p>
+                    &nbsp;</p>
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div class="footer">
+        Copyright © 2024 All Rights Reserved!
+    </div>
+    </form>
+</body>
+</html>
+
